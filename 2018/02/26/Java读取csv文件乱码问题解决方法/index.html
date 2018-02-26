@@ -93,7 +93,7 @@
 <meta property="og:site_name" content="卢天伟 · Lu Tianwei">
 <meta property="og:description" content="假期结束，开始工作。  问题刚刚在进行有效路径生成程序修改的时候遇到了如下问题：  在使用Java读取csv文件时，读入内存中出现中文乱码。 网上查阅相关资料后，将csv文件使用记事本保存为UTF8格式，乱码问题解决。 乱码问题解决同时，又带来新问题：csv文件内容（即使用逗号间隔的内容的数量）读取错乱，原存放csv的数组变量出现了溢出错误。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-26T08:15:15.825Z">
+<meta property="og:updated_time" content="2018-02-26T08:19:34.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java读取csv文件中文乱码问题解决方法">
 <meta name="twitter:description" content="假期结束，开始工作。  问题刚刚在进行有效路径生成程序修改的时候遇到了如下问题：  在使用Java读取csv文件时，读入内存中出现中文乱码。 网上查阅相关资料后，将csv文件使用记事本保存为UTF8格式，乱码问题解决。 乱码问题解决同时，又带来新问题：csv文件内容（即使用逗号间隔的内容的数量）读取错乱，原存放csv的数组变量出现了溢出错误。">
@@ -413,7 +413,7 @@
 <p>由于刚刚的着手点研究无果，又打算从其他方面进行着手。想到Java程序读取ANSI编码的csv文件在大小方面没问题，只是在中文乱码上存在问题。</p>
 <p>于是打算不改变csv的编码（保持ANSI编码），换种角度来改，<strong>修改程序的读取方式</strong>。</p>
 <p><br></p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>因此，将程序读取方式由原来的默认读取方式（UTF*）改为GBK，问题得以解决。</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>因此，将程序读取方式由原来的默认读取方式（UTF8）改为GBK，问题得以解决。</p>
 <p>注：读取csv文件的方式有很多种，本文列举以下两种。</p>
 <p><strong>（1）File → FileReader → BufferReader</strong></p>
 <ul>
